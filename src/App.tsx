@@ -149,12 +149,13 @@ const a = [
 
   import axios from "axios"
   import { VITE_API_ENDPOINT } from "./configs/environment"
+import REQUEST from "@/lib/fetch";
 
 export default function Component() {
 
   useEffect(() => {
     (async () => {
-      const { data } = await axios.get("https://running-api-1007595656483.asia-east2.run.app/api/v1/month-day-distance?year_month=2568-02");
+      const { data } = await REQUEST.get('/month-day-distance?year_month=2568-02');
 
       console.log(data);
     })()
@@ -164,9 +165,6 @@ export default function Component() {
   return (
 <div
   className="h-screen w-screen bg-gradient-to-t from-gray-600 to-gray-900 p-10"
-  // style={{
-  //   background: "radial-gradient(ellipse at center, rgba(120,119,198,0.3), rgba(255,255,255,0))",
-  // }}
 >
 <Card className=" w-full">
       <CardContent className="px-2 sm:p-6">
