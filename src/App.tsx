@@ -147,8 +147,6 @@ const a = [
   }
   ]
 
-  import axios from "axios"
-  import { VITE_API_ENDPOINT } from "./configs/environment"
 import REQUEST from "@/lib/fetch";
 
 export default function Component() {
