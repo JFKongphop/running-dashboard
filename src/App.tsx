@@ -1,3 +1,6 @@
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+
+
 const App = () => {
   return (
     <div className="min-h-screen">
@@ -11,6 +14,34 @@ const App = () => {
               className="w-8 h-8 rounded-full" 
             />
             <p className="text-xl">JFKongphop</p>
+          </div>
+        </div>
+        <div className="w-full flex sm:justify-center">
+          <div className="flex flex-row gap-2 w-[250px]">
+            <div 
+              className="hover:ring-2 hover:ring-[#4b5563] px-4 py-2 rounded-4xl w-full flex flex-row items-center gap-2 bg-[#111827] cursor-pointer justify-center"
+            >
+              <FaGithub className="w-4 h-4" />
+              <a 
+                href="https://github.com/JFKongphop" 
+                target="_blank" 
+                className="text-white text-sm tracking-wider"
+              >
+                Github
+              </a>
+            </div>
+            <div 
+              className="hover:ring-2 hover:ring-[#4b5563] px-4 py-2 rounded-4xl w-full flex flex-row items-center gap-2 bg-[#111827] cursor-pointer justify-center"
+            >
+              <FaLinkedin className="w-4 h-4" />
+              <a 
+                href="https://github.com/JFKongphop" 
+                target="_blank" 
+                className="text-white text-sm tracking-wider"
+              >
+                Linkedin
+              </a>
+            </div>
           </div>
         </div>
         <div 
