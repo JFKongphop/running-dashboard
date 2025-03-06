@@ -35,7 +35,7 @@ const App = () => {
             >
               <FaLinkedin className="w-4 h-4" />
               <a 
-                href="https://github.com/JFKongphop" 
+                href="https://www.linkedin.com/in/kongphop-kingpeth-225308236" 
                 target="_blank" 
                 className="text-white text-sm tracking-wider"
               >
@@ -53,7 +53,7 @@ const App = () => {
             Enthusiastic about <br/> Blockchain Application, <br/>Full-Stack, and Distance Running
           </p>
           <p className="text-lg opacity-50">
-            I’m pursuing studies in Financial Engineering but have a strong interest in Computer Science, particularly in Blockchain technology and Full-Stack development. I’m also passionate about track distance running.
+            I’m pursuing studies in Financial Engineering but have a strong interest in Computer Science, particularly in Blockchain technology and Full-Stack development. <br/> I’m also passionate about track distance running.
           </p>
         </div>
       </div>

@@ -11,10 +11,8 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  server: {
+    host: '0.0.0.0',
+    port: 5173,
+  }
 })
-
-
-// // https://vite.dev/config/
-// export default defineConfig({
-//   plugins: [react()],
-// })
