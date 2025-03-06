@@ -22,8 +22,10 @@ body {
   min-height: 100vh;
   background: #111827;
   overflow-x: hidden;
-  font-family: 'Hanalei Fill', cursive;
-  color: white
+  color: white;
+  font-family: "Fjalla One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .first-screen {

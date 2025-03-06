@@ -60,10 +60,35 @@ export default function Component() {
       
     // </div>
     <div className="min-h-screen">
-      <div className="first-screen h-screen flex justify-center items-center">
-        <span className="font-link">
+      <div className="first-screen w-full h-screen flex flex-col gap-4 justify-center items-center p-8">
+        {/* <div className="border border-red-500 w-"></div>
+        <span className="font-link text-6xl border border-red-500">
                This is with Font Link. We are linking the fonts from the Google Fonts.
-        </span>
+        </span> */}
+        {/* <div className="border border-red-500 lg:w-1/2 sm:w-full p-2 sm:p-10"></div> */}
+
+        <div className="flex flex-row">
+          <img 
+            src="/JFKongphop.jpg" 
+            className="w-20 h-20 rounded-full" 
+          />
+        </div>
+        <div 
+          className="flex flex-col gap-4 w-1/2 text-center max-sm:w-full max-sm:text-start max-sm:text-3xl"
+        >
+          <p 
+            className="text-5xl max-sm:text-3xl leading-14"
+          >
+            Enthusiastic about <br/> Blockchain Application, <br/>Full-Stack, and Distance Running
+          </p>
+          <p className="text-lg opacity-50">
+            I’m pursuing studies in Financial Engineering but have a strong interest in Computer Science, particularly in Blockchain technology and Full-Stack development. I’m also passionate about track distance running.
+          </p>
+          
+
+        </div>
+
+
       </div>
       <div className="second-screen">aaa</div>
 
