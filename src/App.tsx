@@ -1,5 +1,6 @@
+import { useEffect } from "react";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
-
+import { getEvents } from "./lib/github-data";
 
 const App = () => {
   return (
@@ -56,6 +57,11 @@ const App = () => {
             I’m pursuing studies in Financial Engineering but have a strong interest in Computer Science, particularly in Blockchain technology and Full-Stack development. <br/> I’m also passionate about track distance running.
           </p>
         </div>
+      </div>
+      <div 
+        className="second-screen w-full h-screen flex flex-col gap-4 justify-center items-center p-8"
+      >
+
       </div>
     </div>
   )
