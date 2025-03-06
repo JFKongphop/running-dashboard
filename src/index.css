@@ -4,6 +4,37 @@
 
 @custom-variant dark (&:is(.dark *));
 
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: linear-gradient(to top, #111827, #4b5563);
+  overflow-x: hidden;
+} */
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #111827;
+  overflow-x: hidden;
+  font-family: 'Hanalei Fill', cursive;
+  color: white
+}
+
+.first-screen {
+  height: 100vh; /* Covers only the first screen */
+  background: linear-gradient(to top, #111827, #4b5563);
+}
+
+.second-screen {
+  background: #111827;
+}
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -61,13 +92,7 @@ a:hover {
   color: #535bf2;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
+
 
 h1 {
   font-size: 3.2em;

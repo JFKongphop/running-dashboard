@@ -51,66 +51,25 @@ export default function Component() {
   }, [])
 
   return (
-    <div
-      className="h-screen w-screen bg-gradient-to-t from-gray-600 to-gray-900 p-20"
-    >
-      <Card className=" w-full">
-        <CardContent className="px-2 sm:p-6">
-          <ChartContainer
-            config={chartConfig}
-            className="aspect-auto h-[250px] w-full"
-          >
-            {
-              dateDistance && (
-                <BarChart
-                  accessibilityLayer
-                  data={dateDistance}
-                  margin={{
-                    left: 12,
-                    right: 12,
-                  }}
-                >
-                  <CartesianGrid vertical={false} />
-                  <XAxis
-                    dataKey="date"
-                    tickLine={false}
-                    axisLine={false}
-                    tickMargin={8}
-                    minTickGap={32}
-                    tickFormatter={(value) => {
-                      const date = new Date(value)
-                      return date.toLocaleDateString("en-US", {
-                        month: "short",
-                        day: "numeric",
-                      })
-                    }}
-                  />
-                  <ChartTooltip
-                    content={
-                      <ChartTooltipContent
-                        labelFormatter={(value) => {
-                          return new Date(value).toLocaleDateString("en-US", {
-                            month: "short",
-                            day: "numeric",
-                            year: "numeric",
-                          })
-                        }}
-                        contentStyle={{
-                          backgroundColor: "rgba(0, 0, 255, 0.2)",
-                          borderRadius: "8px",
-                          border: "none",
-                        }}
-                      />
-                    }
-                  />
-                  <Bar dataKey={'distance'} fill={`var(--color-mobile`} />
-                </BarChart>
-              )
-            }
-          </ChartContainer>
-        </CardContent>
-      </Card>
+    // <div 
+    //   className="w-full min-h-screen border p-5 border-white"
+    //   // className="min-h-screen w-screen p-10 bg-gradient-to-t from-gray-600 to-gray-900 flex flex-col gap-10 overflow-x-hidden"
+    // >
+    //   {/* <Test /> */}
+    //   <div className="w-4 h-[1000px] bg-red-300">a</div>
+      
+    // </div>
+    <div className="min-h-screen">
+      <div className="first-screen h-screen flex justify-center items-center">
+        <span className="font-link">
+               This is with Font Link. We are linking the fonts from the Google Fonts.
+        </span>
+      </div>
+      <div className="second-screen">aaa</div>
+
     </div>
+
+
   )
 }
 
