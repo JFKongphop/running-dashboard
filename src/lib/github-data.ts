@@ -1,29 +1,39 @@
-export async function getEvents() {
-  let page = 1;
-  const allEvents = [];
-  const today = new Date();
-  const oneYearAgo = new Date(today);
-  oneYearAgo.setFullYear(today.getFullYear() - 1);  // Set to one year ago
-  
-  while (true) {
-    const response = await fetch(`https://api.github.com/users/JFKongphop/events/public?per_page=100&page=2`);
-    const events = await response.json();
+import { Contribution, GithubResponse } from '@/types/github-response';
+import axios, { AxiosResponse } from 'axios';
+import dayjs from 'dayjs';
+import isBetween from "dayjs/plugin/isBetween";
 
-    if (events.length === 0) break; // Stop if no more events are returned
+dayjs.extend(isBetween);
 
-    // Filter events that occurred within the last 365 days
-    const filteredEvents = events.filter(event => {
-      const eventDate = new Date(event.created_at);
-      return eventDate >= oneYearAgo && eventDate <= today;
-    });
+const flattenContributions = (data: GithubResponse): Contribution[] => {
+  return Object.values(data.contributions)
+    .flatMap(year =>
+      Object.values(year)
+        .flatMap(month =>
+          Object.values(month)
+        )
+    );
+};
 
-    allEvents.push(...filteredEvents);
-    page++;
-  }
+export const githubContribution = async (): Promise<number> => {
+  const todayThisYear = dayjs().format('YYYY-MM-DD');
+  const todayLastYear = dayjs().subtract(1, 'year').add(1, "day").format("YYYY-MM-DD");
+  const thisYear = todayThisYear.slice(0, 4);
+  const lastYear = todayLastYear.slice(0, 4);
 
-  return allEvents;
+  const githubContributionUrl = `https://github-contributions-api.jogruber.de/v4/JFKongphop?format=nested&y=${lastYear}&y=${thisYear}`;
+  const { data }:AxiosResponse<GithubResponse> = await axios.get(githubContributionUrl);
+
+  const contributions = flattenContributions(data);
+
+  const filterContributionDate = contributions.filter(({ date }) => dayjs(date).isBetween(
+    todayThisYear, 
+    todayLastYear, 
+    "day", 
+    "[]"
+  ));
+
+  const sumContributions = filterContributionDate.reduce((sum, { count}) => sum + count, 0);
+
+  return sumContributions
 }
-
-getEvents().then(events => {
-  console.log(events);  // This will log events from the past 365 days
-});

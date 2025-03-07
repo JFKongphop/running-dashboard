@@ -1,6 +1,18 @@
 import { FaLinkedin, FaGithub } from "react-icons/fa";
+import dayjs from "dayjs";
+import { useEffect, useState } from "react";
+import { githubContribution } from "@/lib/github-data";
 
 const App = () => {
+  const [sumContributions, setSumContributions] = useState<number>(0);
+  
+  useEffect(() => {
+    (async () => {
+      const sum = await githubContribution();
+      setSumContributions(sum);
+    })();
+  }, []);
+
   return (
     <div className="min-h-screen">
       <div 
@@ -59,12 +71,16 @@ const App = () => {
       <div 
         className="second-screen w-full h-screen flex flex-col gap-4 justify-center items-center p-8"
       >
-        <div className="w-full h-full border border-red-500">
-          <img 
-            src="https://ghchart.rshah.org/4b5563/JFKongphop" 
-            alt="JFKongphop's GitHub Chart"
-            className="w-full"
-          />
+        <div className="w-full h-full flex justify-center">
+          <div className="w-2/3 flex flex-col gap-2">
+            <p className="text-xs">{sumContributions} contribution last year</p>
+            <img 
+              src="https://ghchart.rshah.org/4b5563/JFKongphop" 
+              alt="JFKongphop's GitHub Chart"
+              className="w-full"
+            />
+
+          </div>
 
         </div>
 
