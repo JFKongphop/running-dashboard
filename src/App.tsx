@@ -1,6 +1,4 @@
-import { useEffect } from "react";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
-import { getEvents } from "./lib/github-data";
 
 const App = () => {
   return (
@@ -61,6 +59,14 @@ const App = () => {
       <div 
         className="second-screen w-full h-screen flex flex-col gap-4 justify-center items-center p-8"
       >
+        <div className="w-full h-full border border-red-500">
+          <img 
+            src="https://ghchart.rshah.org/4b5563/JFKongphop" 
+            alt="JFKongphop's GitHub Chart"
+            className="w-full"
+          />
+
+        </div>
 
       </div>
     </div>
