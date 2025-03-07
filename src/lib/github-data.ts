@@ -6,7 +6,7 @@ export async function getEvents() {
   oneYearAgo.setFullYear(today.getFullYear() - 1);  // Set to one year ago
   
   while (true) {
-    const response = await fetch(`https://api.github.com/users/JFKongphop/events/public?per_page=100&page=${page}`);
+    const response = await fetch(`https://api.github.com/users/JFKongphop/events/public?per_page=100&page=2`);
     const events = await response.json();
 
     if (events.length === 0) break; // Stop if no more events are returned
@@ -24,6 +24,6 @@ export async function getEvents() {
   return allEvents;
 }
 
-// getEvents(').then(events => {
-//   console.log(events);  // This will log events from the past 365 days
-// });
+getEvents().then(events => {
+  console.log(events);  // This will log events from the past 365 days
+});
