@@ -71,17 +71,30 @@ const App = () => {
       <div 
         className="second-screen w-full h-screen flex flex-col gap-4 justify-center items-center p-8"
       >
-        <div className="w-full h-full flex justify-center">
-          <div className="w-2/3 flex flex-col gap-2">
-            <p className="text-xs">{sumContributions} contribution last year</p>
+        <div className="w-full h-full flex flex-col gap-6 items-center text-lg max-sm:text-xs">
+          <div className="w-2/3 max-sm:w-full flex flex-col gap-4">
+            <p 
+              className="text-center"
+            >
+              {sumContributions} contributions last year
+            </p>
             <img 
               src="https://ghchart.rshah.org/4b5563/JFKongphop" 
               alt="JFKongphop's GitHub Chart"
               className="w-full"
             />
+          </div>
+          <div className="w-2/3 max-sm:w-full flex flex-col gap-4">
+            <p className="text-center">Tech Stacks</p>
+            <div className="grid grid-cols-4 max-sm:grid-cols-2 col-span-1 gap-2">
+              <p className="border h-10">a</p>
+              <p>a</p>
+              <p>a</p>
+              <p>a</p>
+            </div>
 
           </div>
-
+          
         </div>
 
       </div>
