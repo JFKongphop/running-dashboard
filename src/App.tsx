@@ -123,6 +123,7 @@ const App = () => {
                 className="border h-20 border-bright-shade rounded-lg hover:border-white flex justify-center items-center"
               >
                 <p className="">Node / Express / Nest.js</p>
+                
               </div>
               <div 
                 className="border h-20 border-bright-shade rounded-lg hover:border-white flex justify-center items-center"
