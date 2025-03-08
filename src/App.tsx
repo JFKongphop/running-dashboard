@@ -6,6 +6,7 @@ import TechStackCard from "@/components/cards/TechStackCard";
 import TechStackDescriptionCard from "@/components/cards/TechStackDescriptionCard";
 import techStack from "@/constants/tech-stack";
 import LinkCard from "@/components/cards/LinkCard";
+import linkProfiles from "./constants/link-profile";
 
 const App = () => {
   const [sumContributions, setSumContributions] = useState<number>(0);
@@ -33,21 +34,15 @@ const App = () => {
         </div>
         <div className="w-full flex sm:justify-center">
           <div className="flex flex-row gap-2">
-            <LinkCard 
-              Icon={FaGithub}
-              link={'https://github.com/JFKongphop'}
-              name={'Github'}
-            />
-            <LinkCard 
-              Icon={FaLinkedin}
-              link={'https://www.linkedin.com/in/kongphop-kingpeth-225308236'}
-              name={'Linkedin'}
-            />
-            <LinkCard 
-              Icon={FaMedium}
-              link={'https://medium.com/@kongphopkingpeth'}
-              name={'Medium'}
-            />
+            {
+              linkProfiles.map(({ Icon, link, name }) => (
+                <LinkCard 
+                  Icon={Icon}
+                  link={link}
+                  name={name}
+                />
+              ))
+            }
           </div>
         </div>
         <div 
