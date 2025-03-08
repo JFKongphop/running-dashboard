@@ -1,4 +1,3 @@
-import { FaLinkedin, FaGithub, FaMedium } from "react-icons/fa";
 import dayjs from "dayjs";
 import { useEffect, useState } from "react";
 import { githubContribution } from "@/lib/github-data";
@@ -6,7 +5,8 @@ import TechStackCard from "@/components/cards/TechStackCard";
 import TechStackDescriptionCard from "@/components/cards/TechStackDescriptionCard";
 import techStack from "@/constants/tech-stack";
 import LinkCard from "@/components/cards/LinkCard";
-import linkProfiles from "./constants/link-profile";
+import linkProfiles from "@/constants/link-profile";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 const App = () => {
   const [sumContributions, setSumContributions] = useState<number>(0);
@@ -62,11 +62,11 @@ const App = () => {
         className="second-screen w-full min-h-screen flex flex-col gap-4 justify-center items-center p-8"
       >
         <div 
-          className="w-full h-full flex flex-col gap-6 items-center text-lg max-sm:text-xs justify-center"
+          className="w-full h-full flex flex-col gap-8 items-center text-lg max-sm:text-xs justify-center"
         >
           <div className="w-2/3 max-sm:w-full flex flex-col gap-4">
             <p 
-              className="text-center"
+              className="text-center text-2xl"
             >
               {sumContributions} contributions last year
             </p>
@@ -77,7 +77,7 @@ const App = () => {
             />
           </div>
           <div className="w-2/3 max-sm:w-full flex flex-col gap-4">
-            <p className="text-center">Tech Stacks</p>
+            <p className="text-center text-2xl">Tech Stacks</p>
             <div className="grid grid-cols-4 max-sm:grid-cols-2 col-span-1 gap-2">
               {
                 techStack.map(({ key, description }) => (
@@ -87,6 +87,27 @@ const App = () => {
                   </TechStackCard>
                 ))
               }
+            </div>
+          </div>
+          <div className="w-2/3 max-sm:w-full flex flex-col gap-4">
+            <p className="text-center text-2xl">Hackathons</p>
+            <div className="w-full flex flex-row max-sm:flex-col gap-4">
+              <div className="w-2/3 max-sm:w-full flex flex-col gap-2">
+                <p className="text-2xl">zkDebit</p>
+                <p className="text-base opacity-50">
+                  zkDebit is an innovative payment platform that leverages zero-knowledge proofs (ZKPs) to enhance privacy and security in digital transactions. Unlike traditional payment systems, zkDebit eliminates the need to share sensitive details such as card numbers, CVVs, or expiration dates with merchants. Instead, users generate and submit a cryptographic proof verifying their ownership of the card and transaction validity.
+                </p>
+                <div className="flex flex-row justify-between items-center">
+                  <p>(Backend and Smart Contract)</p>
+                  <a href="https://ethglobal.com/showcase/zkdebit-ypjir" target="_blank">
+                    <FaExternalLinkAlt />
+                  </a>
+                </div>
+                
+              </div>
+              <div className="w-1/3 max-sm:w-full h-[200px]">
+                <img src="/zkDebit.png" className=" object-cover rounded-2xl h-[200px] w-full" />
+              </div>
             </div>
           </div>
         </div>
