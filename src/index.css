@@ -103,7 +103,9 @@ a:active {
   color: white; /* Keeps color white when clicked */
 }
 
-
+@theme {
+  --color-bright-shade: #4b5563;
+}
 
 h1 {
   font-size: 3.2em;

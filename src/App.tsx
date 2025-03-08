@@ -71,7 +71,9 @@ const App = () => {
       <div 
         className="second-screen w-full h-screen flex flex-col gap-4 justify-center items-center p-8"
       >
-        <div className="w-full h-full flex flex-col gap-6 items-center text-lg max-sm:text-xs">
+        <div 
+          className="w-full h-full flex flex-col gap-6 items-center text-lg max-sm:text-xs justify-center"
+        >
           <div className="w-2/3 max-sm:w-full flex flex-col gap-4">
             <p 
               className="text-center"
@@ -87,16 +89,99 @@ const App = () => {
           <div className="w-2/3 max-sm:w-full flex flex-col gap-4">
             <p className="text-center">Tech Stacks</p>
             <div className="grid grid-cols-4 max-sm:grid-cols-2 col-span-1 gap-2">
-              <p className="border h-10">a</p>
-              <p>a</p>
-              <p>a</p>
-              <p>a</p>
+              <div 
+                className="border h-20 border-bright-shade rounded-lg hover:border-white flex flex-col justify-center items-center p-2 gap-1"
+              >
+                <p className="">Solidity / Foundry / Hardhat</p>
+                <p 
+                  className="max-sm:text-[8px] text-xs opacity-50"
+                >
+                  Smart contract development and testing
+                </p>
+              </div>
+              <div 
+                className="border h-20 border-bright-shade rounded-lg hover:border-white flex flex-col justify-center items-center"
+              >
+                <p className="">Wagmi / Ether.js / Alloy</p>
+                <p className="text-xs opacity-50">Web3 frontend interact and observe data</p>
+
+              </div>
+              <div 
+                className="border h-20 border-bright-shade rounded-lg hover:border-white flex flex-col justify-center items-center"
+              >
+                <p className="">Next.js / React</p>
+                <p className="text-xs opacity-50">Best choice for frontend development</p>
+              </div>
+              <div 
+                className="border h-20 border-bright-shade rounded-lg hover:border-white flex flex-col justify-center items-center"
+              >
+                <p className="">React Native</p>
+                <p className="text-xs opacity-50">Only one mobile development that I can do!</p>
+
+              </div>
+              <div 
+                className="border h-20 border-bright-shade rounded-lg hover:border-white flex justify-center items-center"
+              >
+                <p className="">Node / Express / Nest.js</p>
+              </div>
+              <div 
+                className="border h-20 border-bright-shade rounded-lg hover:border-white flex justify-center items-center"
+              >
+                <p className="">Tailwind CSS / SASS</p>
+              </div>
+              <div 
+                className="border h-20 border-bright-shade rounded-lg hover:border-white flex justify-center items-center"
+              >
+                <p className="">Day.js</p>
+              </div>
+              <div 
+                className="border h-20 border-bright-shade rounded-lg hover:border-white flex justify-center items-center"
+              >
+                <p className="">Circom</p>
+              </div>
+              <div 
+                className="border h-20 border-bright-shade rounded-lg hover:border-white flex justify-center items-center"
+              >
+                <p className="">Gin / Fiber / Echo</p>
+              </div>
+              <div 
+                className="border h-20 border-bright-shade rounded-lg hover:border-white flex justify-center items-center"
+              >
+                <p className="">Axum</p>
+              </div>
+              <div 
+                className="border h-20 border-bright-shade rounded-lg hover:border-white flex justify-center items-center"
+              >
+                <p className="">Polars (rust) / Pandas</p>
+              </div>
+              <div 
+                className="border h-20 border-bright-shade rounded-lg hover:border-white flex justify-center items-center"
+              >
+                <p className="">Flask</p>
+              </div>
+              <div 
+                className="border h-20 border-bright-shade rounded-lg hover:border-white flex justify-center items-center"
+              >
+                <p className="">mySQL / SQLite</p>
+              </div>
+              <div 
+                className="border h-20 border-bright-shade rounded-lg hover:border-white flex justify-center items-center"
+              >
+                <p className="">Google Cloud</p>
+              </div>
+              <div 
+                className="border h-20 border-bright-shade rounded-lg hover:border-white flex justify-center items-center"
+              >
+                <p className="">Railway / Vercel</p>
+              </div>
+              <div 
+                className="border h-20 border-bright-shade rounded-lg hover:border-white flex justify-center items-center"
+              >
+                <p className="">Digital Ocean</p>
+              </div>
             </div>
-
           </div>
-          
         </div>
-
       </div>
     </div>
   )
