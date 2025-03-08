@@ -1,4 +1,4 @@
-import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaMedium } from "react-icons/fa";
 import dayjs from "dayjs";
 import { useEffect, useState } from "react";
 import { githubContribution } from "@/lib/github-data";
@@ -54,6 +54,18 @@ const App = () => {
                 className="text-white text-sm tracking-wider"
               >
                 Linkedin
+              </a>
+            </div>
+            <div 
+              className="hover:ring-2 hover:ring-[#4b5563] px-4 py-2 rounded-4xl w-full flex flex-row items-center gap-2 bg-[#111827] cursor-pointer justify-center"
+            >
+              <FaMedium className="w-4 h-4" />
+              <a 
+                href="https://medium.com/@kongphopkingpeth" 
+                target="_blank" 
+                className="text-white text-sm tracking-wider"
+              >
+                Medium
               </a>
             </div>
           </div>

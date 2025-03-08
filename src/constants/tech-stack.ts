@@ -32,6 +32,10 @@ const techStack: TechStack[] = [
     key: 'Day.js',
     description: 'Small size and simple to use for time management',
   },
+  {
+    key: 'React Hook Form',
+    description: 'The best validate form because I used to apply only one!',
+  },
   { key: 'Circom', 
     description: 'First ZKP language that I learned!' },
   {
@@ -55,10 +59,6 @@ const techStack: TechStack[] = [
   {
     key: 'Railway / Vercel',
     description: 'POC of some services and testing frontend deployment',
-  },
-  {
-    key: 'Digital Ocean',
-    description: 'Cloud that I used but prefer Google Cloud lol!',
   },
 ];
 
