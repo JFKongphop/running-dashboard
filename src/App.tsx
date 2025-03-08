@@ -1,4 +1,3 @@
-import dayjs from "dayjs";
 import { useEffect, useState } from "react";
 import { githubContribution } from "@/lib/github-data";
 import TechStackCard from "@/components/cards/TechStackCard";
@@ -93,24 +92,33 @@ const App = () => {
             <p className="text-center text-2xl">Hackathons</p>
             <div className="w-full flex flex-row max-sm:flex-col gap-4">
               <div className="w-2/3 max-sm:w-full flex flex-col gap-2">
-                <p className="text-2xl">zkDebit</p>
+                <p className="text-xl">zkDebit</p>
                 <p className="text-base opacity-50">
                   zkDebit is an innovative payment platform that leverages zero-knowledge proofs (ZKPs) to enhance privacy and security in digital transactions. Unlike traditional payment systems, zkDebit eliminates the need to share sensitive details such as card numbers, CVVs, or expiration dates with merchants. Instead, users generate and submit a cryptographic proof verifying their ownership of the card and transaction validity.
                 </p>
                 <div className="flex flex-row justify-between items-center">
                   <p>(Backend and Smart Contract)</p>
-                  <a href="https://ethglobal.com/showcase/zkdebit-ypjir" target="_blank">
+                  <a 
+                    href="https://ethglobal.com/showcase/zkdebit-ypjir" 
+                    target="_blank"
+                  >
                     <FaExternalLinkAlt />
                   </a>
                 </div>
-                
               </div>
               <div className="w-1/3 max-sm:w-full h-[200px]">
-                <img src="/zkDebit.png" className=" object-cover rounded-2xl h-[200px] w-full" />
+                <img 
+                  src="/zkDebit.png" 
+                  className="rounded-2xl h-[200px] w-full" 
+                />
               </div>
             </div>
           </div>
         </div>
+      </div>
+      <div className="h-[100px] w-full bg-bright-shade flex flex-col justify-center items-center">
+        <p>EMAIL</p>
+        <a className=" underline" href="mailto:kongphopleo@gmail.com">Kongphopleo@gmail.com</a>
       </div>
     </div>
   )
