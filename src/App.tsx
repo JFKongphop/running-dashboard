@@ -2,9 +2,10 @@ import { FaLinkedin, FaGithub, FaMedium } from "react-icons/fa";
 import dayjs from "dayjs";
 import { useEffect, useState } from "react";
 import { githubContribution } from "@/lib/github-data";
-import TechStackCard from "./components/cards/TechStackCard";
-import TechStackDescriptionCard from "./components/cards/TechStackDescriptionCard";
-import techStack from "./constants/tech-stack";
+import TechStackCard from "@/components/cards/TechStackCard";
+import TechStackDescriptionCard from "@/components/cards/TechStackDescriptionCard";
+import techStack from "@/constants/tech-stack";
+import LinkCard from "@/components/cards/LinkCard";
 
 const App = () => {
   const [sumContributions, setSumContributions] = useState<number>(0);
@@ -31,43 +32,22 @@ const App = () => {
           </div>
         </div>
         <div className="w-full flex sm:justify-center">
-          <div className="flex flex-row gap-2 w-[250px]">
-            <div 
-              className="hover:ring-2 hover:ring-[#4b5563] px-4 py-2 rounded-4xl w-full flex flex-row items-center gap-2 bg-[#111827] cursor-pointer justify-center"
-            >
-              <FaGithub className="w-4 h-4" />
-              <a 
-                href="https://github.com/JFKongphop" 
-                target="_blank" 
-                className="text-white text-sm tracking-wider"
-              >
-                Github
-              </a>
-            </div>
-            <div 
-              className="hover:ring-2 hover:ring-[#4b5563] px-4 py-2 rounded-4xl w-full flex flex-row items-center gap-2 bg-[#111827] cursor-pointer justify-center"
-            >
-              <FaLinkedin className="w-4 h-4" />
-              <a 
-                href="https://www.linkedin.com/in/kongphop-kingpeth-225308236" 
-                target="_blank" 
-                className="text-white text-sm tracking-wider"
-              >
-                Linkedin
-              </a>
-            </div>
-            <div 
-              className="hover:ring-2 hover:ring-[#4b5563] px-4 py-2 rounded-4xl w-full flex flex-row items-center gap-2 bg-[#111827] cursor-pointer justify-center"
-            >
-              <FaMedium className="w-4 h-4" />
-              <a 
-                href="https://medium.com/@kongphopkingpeth" 
-                target="_blank" 
-                className="text-white text-sm tracking-wider"
-              >
-                Medium
-              </a>
-            </div>
+          <div className="flex flex-row gap-2">
+            <LinkCard 
+              Icon={FaGithub}
+              link={'https://github.com/JFKongphop'}
+              name={'Github'}
+            />
+            <LinkCard 
+              Icon={FaLinkedin}
+              link={'https://www.linkedin.com/in/kongphop-kingpeth-225308236'}
+              name={'Linkedin'}
+            />
+            <LinkCard 
+              Icon={FaMedium}
+              link={'https://medium.com/@kongphopkingpeth'}
+              name={'Medium'}
+            />
           </div>
         </div>
         <div 
