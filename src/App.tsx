@@ -109,10 +109,10 @@ const App = () => {
                     </a>
                   </div>
                 </div>
-                <div className="w-1/3 max-sm:w-full h-[200px]">
+                <div className="w-1/3 max-sm:w-full h-[300px]">
                   <img 
                     src="/zkDebit.png" 
-                    className="rounded-2xl h-[200px] w-full" 
+                    className="rounded-2xl h-full w-full" 
                   />
                 </div>
               </div>
